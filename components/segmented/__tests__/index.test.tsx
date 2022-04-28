@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { AppstoreOutlined, BarsOutlined } from '@ant-design/icons';
 
 import mountTest from '../../../tests/shared/mountTest';
 import rtlTest from '../../../tests/shared/rtlTest';
@@ -88,10 +87,7 @@ describe('Segmented', () => {
   it('render segmented with string options', () => {
     const handleValueChange = jest.fn();
     const wrapper = mount(
-      <Segmented
-        options={['Daily', 'Weekly', 'Monthly']}
-        onChange={handleValueChange}
-      />,
+      <Segmented options={['Daily', 'Weekly', 'Monthly']} onChange={handleValueChange} />,
     );
     expect(wrapper.render()).toMatchSnapshot();
 
